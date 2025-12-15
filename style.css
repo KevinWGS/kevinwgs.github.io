@@ -143,7 +143,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Buttons (terminal-style) ===== */
+/* ===== Buttons ===== */
 .btn,
 button,
 .toggle-btn {
@@ -268,6 +268,7 @@ button:active,
   margin-bottom: 4px;
 }
 
+/* Resume links should match terminal text */
 .resume-contact a {
   color: var(--text);
   text-decoration: none;
@@ -457,7 +458,7 @@ button {
   text-shadow: 0 0 4px rgba(0, 255, 102, 0.35);
 }
 
-/* Very light flicker (barely noticeable) */
+/* Very light flicker */
 @keyframes crt-flicker {
   0% {
     opacity: 1;
@@ -505,7 +506,7 @@ body::after {
   z-index: 9997;
 }
 
-/* Softer text glow */
+/* Soft text glow */
 h1,
 h2,
 h3,
