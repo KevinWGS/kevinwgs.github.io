@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kevin - Resume</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Kevin</div>
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="js-cheatsheet.html">JS Cheat Sheet</a>
+        <a href="hobby.html">Hobby</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="card resume-header">
+        <div class="resume-top">
+          <div class="resume-identity">
+            <img
+              class="resume-avatar"
+              src="images/profile.jpeg"
+              alt="Profile picture of Kevin"
+            />
+
+            <div class="resume-title">
+              <h1>Kevin Souza</h1>
+              <p class="resume-subtitle">
+                Software Development Student • Calgary, AB
+              </p>
+            </div>
+          </div>
+
+          <a class="btn" href="#" onclick="window.print(); return false;"
+            >Print / Save as PDF</a
+          >
+        </div>
+
+        <div class="resume-contact">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:kevinwgsouza@gmail.com">kevinwgsouza@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span>Calgary, Alberta</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a
+              href="https://github.com/KevinWGS"
+              target="_blank"
+              rel="noopener noreferrer"
+              >github.com/KevinWGS</a
+            >
+          </div>
+        </div>
+
+        <p class="resume-summary">
+          I’m a Software Development Diploma student building strong foundations
+          in programming and web development. I like learning by building
+          projects and improving them over time.
+        </p>
+      </section>
+
+      <section class="resume-grid">
+        <article class="card">
+          <h2>Top Skills</h2>
+          <div class="skill-pills">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">C</span>
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+          </div>
+          <p class="muted">These are what I use the most right now.</p>
+        </article>
+
+        <article class="card">
+          <h2>Focus</h2>
+          <ul class="clean-list">
+            <li>Building clean UI pages with responsive layouts</li>
+            <li>Practicing JavaScript fundamentals and DOM</li>
+            <li>Writing readable code and improving projects</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section card">
+        <h2>Education</h2>
+
+        <div class="resume-item">
+          <div class="resume-item-head">
+            <h3>Software Development Diploma</h3>
+            <span class="resume-date">2025 – Present</span>
+          </div>
+          <p class="resume-org">Bow Valley College</p>
+          <ul class="clean-list">
+            <li>
+              Learning programming fundamentals, problem solving, and web
+              development
+            </li>
+            <li>Building projects and assignments to practice concepts</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section card">
+        <h2>Skills</h2>
+        <p class="muted">Tip: you can click the table headers to sort.</p>
+
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frontend</td>
+              <td>HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+              <td>Programming</td>
+              <td>C (fundamentals), basic problem solving</td>
+            </tr>
+            <tr>
+              <td>Tools</td>
+              <td>Git, GitHub, VS Code, Vim, Terminal</td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td>Teamwork, Communication, Time management</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="resume-section card">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <div class="resume-item-head">
+            <h3>Personal Website</h3>
+            <span class="resume-date">2025</span>
+          </div>
+          <p class="muted">HTML • CSS • JavaScript</p>
+          <ul class="clean-list">
+            <li>
+              Built multiple pages with a shared navbar and consistent styling
+            </li>
+            <li>
+              Added back-to-top button, mobile menu, and collapsible cheat sheet
+              sections
+            </li>
+            <li>Improved tables with striped rows and click-to-sort</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <div class="resume-item-head">
+            <h3>Class Assignments</h3>
+            <span class="resume-date">2025</span>
+          </div>
+          <p class="muted">Programming practice and small builds</p>
+          <ul class="clean-list">
+            <li>
+              Worked on small projects to practice logic, loops, arrays, and
+              functions
+            </li>
+            <li>Focused on debugging and keeping code simple and readable</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section card">
+        <h2>Experience</h2>
+        <p class="muted">
+          I’m still building experience. I’ll update this section as I gain
+          more.
+        </p>
+      </section>
+    </main>
+
+    <button id="backToTop">↑</button>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Kevin Souza</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
