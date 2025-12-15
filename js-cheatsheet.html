@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kevin - JavaScript Cheat Sheet</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">Kevin</div>
+
+      <button class="menu-btn" id="menu-btn">☰</button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="js-cheatsheet.html" class="active">JS Cheat Sheet</a>
+        <a href="hobby.html">Hobby</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h1>JavaScript Cheat Sheet</h1>
+      <p>My notes for important JavaScript concepts and syntax.</p>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Variables (let, const)</button>
+        <div class="cheat-content">
+          <p>
+            Use <code>let</code> and <code>const</code> instead of
+            <code>var</code>.
+          </p>
+          <pre><code>let age = 25;
+const name = "Kevin";</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Functions</button>
+        <div class="cheat-content">
+          <p>Basic function syntax:</p>
+          <pre><code>function add(a, b) {
+  return a + b;
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Arrow Functions</button>
+        <div class="cheat-content">
+          <pre><code>const multiply = (a, b) =&gt; a * b;</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Data Types</button>
+        <div class="cheat-content">
+          <p>JavaScript has dynamic typing.</p>
+          <pre><code>let x = 10;        // number
+let y = "hello";  // string
+let z = true;     // boolean</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Arrays</button>
+        <div class="cheat-content">
+          <p>Arrays store multiple values.</p>
+          <pre><code>let numbers = [1, 2, 3, 4];</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Objects</button>
+        <div class="cheat-content">
+          <p>Objects store key-value pairs.</p>
+          <pre><code>let person = {
+  name: "Kevin",
+  age: 20
+};</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">If / Else</button>
+        <div class="cheat-content">
+          <pre><code>if (age >= 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Switch Statement</button>
+        <div class="cheat-content">
+          <pre><code>switch(day) {
+  case 1:
+    console.log("Monday");
+    break;
+  default:
+    console.log("Other day");
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">For Loop</button>
+        <div class="cheat-content">
+          <pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">While Loop</button>
+        <div class="cheat-content">
+          <pre><code>let i = 0;
+while (i < 3) {
+  console.log(i);
+  i++;
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">ForEach</button>
+        <div class="cheat-content">
+          <pre><code>numbers.forEach(num => {
+  console.log(num);
+});</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Array Map</button>
+        <div class="cheat-content">
+          <pre><code>let doubled = numbers.map(n => n * 2);</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Array Filter</button>
+        <div class="cheat-content">
+          <pre><code>let evens = numbers.filter(n => n % 2 === 0);</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Comparison Operators</button>
+        <div class="cheat-content">
+          <pre><code>5 == "5"   // true
+5 === "5"  // false</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Logical Operators</button>
+        <div class="cheat-content">
+          <pre><code>true && false
+true || false
+!true</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">DOM Selection</button>
+        <div class="cheat-content">
+          <pre><code>document.getElementById("title");
+document.querySelector(".box");</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Event Listeners</button>
+        <div class="cheat-content">
+          <pre><code>button.addEventListener("click", () => {
+  alert("Clicked");
+});</code></pre>
+        </div>
+      </section>
+
+      <section class="cheat-section">
+        <button class="toggle-btn">Console Methods</button>
+        <div class="cheat-content">
+          <pre><code>console.log("Hello");
+console.error("Error");
+console.table(numbers);</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <button id="backToTop">↑</button>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Kevin Souza</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,576 @@
+/* ===== Terminal Theme ===== */
+
+:root {
+  --bg: #000000; /* terminal background */
+  --panel: #050505; /* slightly different black */
+  --text: #00ff66; /* terminal green */
+  --muted: #00cc55; /* dim green */
+  --border: #00ff66; /* green borders */
+  --link: #00ff66; /* links same green */
+  --link-hover: #a6ffcc;
+  --warn: #ffee55;
+  --shadow: rgba(0, 255, 102, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Make everything feel like terminal text */
+h1,
+h2,
+h3,
+p,
+li,
+td,
+th,
+a,
+button,
+input,
+textarea,
+select {
+  letter-spacing: 0.2px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #000;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 700;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 10px;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-color: var(--border);
+}
+
+.nav-links a.active {
+  border-color: var(--border);
+  background: rgba(0, 255, 102, 0.06);
+}
+
+/* Mobile menu button */
+.menu-btn {
+  font-size: 1.4rem;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--text);
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn:hover {
+  border-color: var(--border);
+}
+
+@media (max-width: 700px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 12px;
+    background: #000;
+    padding: 10px;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid var(--border);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* ===== Page container ===== */
+.page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 2px rgba(0, 255, 102, 0.06);
+}
+
+.page h1::before {
+  content: "kevinsouza@site:~$ ";
+  color: var(--muted);
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* ===== Buttons (terminal-style) ===== */
+.btn,
+button,
+.toggle-btn {
+  font-family: inherit;
+  color: var(--text);
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn:hover,
+button:hover,
+.toggle-btn:hover {
+  background: rgba(0, 255, 102, 0.06);
+}
+
+.btn:active,
+button:active,
+.toggle-btn:active {
+  transform: translateY(1px);
+}
+
+/* ===== Cards ===== */
+.card-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (min-width: 700px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 12px;
+  box-shadow: 0 0 18px var(--shadow);
+}
+
+.card-link {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border);
+}
+
+.card-link:hover {
+  border-bottom-style: solid;
+}
+
+/* ===== Resume sections ===== */
+.resume-section {
+  margin-bottom: 16px;
+}
+
+/* ===== Resume header layout ===== */
+.resume-header {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resume-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 260px;
+}
+
+.resume-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  filter: contrast(1.05) saturate(0.85);
+}
+
+.resume-subtitle {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.resume-contact {
+  display: grid;
+  gap: 10px;
+}
+
+@media (min-width: 700px) {
+  .resume-contact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.contact-item {
+  border: 1px solid var(--border);
+  padding: 10px;
+  background: #000;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.resume-contact a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border);
+}
+
+.resume-contact a:hover {
+  color: var(--link-hover);
+  border-bottom-style: solid;
+}
+
+.resume-summary {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* ===== Tables ===== */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.skills-table th,
+.skills-table td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+
+.skills-table th {
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 255, 102, 0.06);
+}
+
+/* “striped” but terminal-like */
+.skills-table tbody tr:nth-child(even) {
+  background: rgba(0, 255, 102, 0.03);
+}
+
+.skills-table tbody tr:hover {
+  background: rgba(0, 255, 102, 0.08);
+}
+
+/* ===== Hobby grid ===== */
+.hobby-grid {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 18px;
+}
+
+@media (min-width: 700px) {
+  .hobby-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ===== Cheat sheet ===== */
+.cheat-section {
+  margin: 12px 0;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.toggle-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.cheat-content {
+  padding: 10px 12px;
+  display: none;
+  background: #000;
+  border-top: 1px solid var(--border);
+}
+
+.cheat-content.open {
+  display: block;
+}
+
+pre {
+  background: #000;
+  border: 1px solid var(--border);
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* ===== Back to top ===== */
+#backToTop {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: #000;
+  color: var(--text);
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  background: #000;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ===== Print ===== */
+@media print {
+  .navbar,
+  #backToTop,
+  .site-footer,
+  .menu-btn {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-family: "Courier New", monospace;
+  }
+
+  .page,
+  .card,
+  .contact-item,
+  pre,
+  .skills-table th,
+  .skills-table td {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .page h1::before {
+    content: "";
+  }
+}
+
+/* ===== CRT scanline + glow effect ===== */
+
+/* Scanlines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 102, 0.03),
+    rgba(0, 255, 102, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 9998;
+}
+
+/* Subtle screen glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 255, 102, 0.08) 0%,
+    rgba(0, 0, 0, 0.85) 65%
+  );
+  z-index: 9997;
+}
+
+/* Slight text glow */
+h1,
+h2,
+h3,
+p,
+li,
+td,
+th,
+a,
+button {
+  text-shadow: 0 0 4px rgba(0, 255, 102, 0.35);
+}
+
+/* Very light flicker (barely noticeable) */
+@keyframes crt-flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.985;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: crt-flicker 6s infinite;
+}
+/* ===== CRT scanline + glow effect  ===== */
+
+/* Scanlines  */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 102, 0.015),
+    rgba(0, 255, 102, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 9998;
+}
+
+/* Screen glow  */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 255, 102, 0.04) 0%,
+    rgba(0, 0, 0, 0.35) 70%
+  );
+  z-index: 9997;
+}
+
+/* Softer text glow */
+h1,
+h2,
+h3,
+p,
+li,
+td,
+th,
+a,
+button {
+  text-shadow: 0 0 2px rgba(0, 255, 102, 0.25);
+}
+
+/* flicker */
+@keyframes crt-flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.995;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: crt-flicker 10s infinite;
+}
+
+/* Terminal intro */
+.terminal-intro {
+  margin-bottom: 16px;
+}
+
+.terminal-pre {
+  margin: 0;
+}
+
+.prompt {
+  color: var(--muted);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-output {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: #000;
+}
+
+.terminal-output p {
+  margin: 0 0 6px;
+}
+
+.terminal-output p:last-child {
+  margin-bottom: 0;
+}
